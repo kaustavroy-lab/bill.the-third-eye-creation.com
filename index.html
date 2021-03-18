@@ -16,8 +16,8 @@
 <link href="third eye 3 png.png" rel="icon" sizes="541x541" type="image/png">
 <link href="third eye 3 png.png" rel="icon" sizes="541x541" type="image/png">
 <link href="third eye 3 png.png" rel="apple-touch-icon" sizes="541x541">
-<link href="Bill_ThirdEye.css?v=1" rel="stylesheet">
-<link href="index.css?v=1" rel="stylesheet">
+<link href="Bill_ThirdEye.css?v=2" rel="stylesheet">
+<link href="index.css?v=2" rel="stylesheet">
 <script src="jquery-1.12.4.min.js"></script>
 <script>
 $(document).ready(function()
@@ -312,9 +312,60 @@ $(document).ready(function()
 <div class="row">
 <div class="col-1">
 <a id="Button1" href="javascript:window.print()" style="display:inline-block;width:123px;height:38px;z-index:68;">Print Receipt</a>
+<div style="z-index:69">
+<script>
+var disabled_message = "";
+document.oncontextmenu = function() 
+{ 
+   return false; 
+}
+document.onmousedown = function md(e) 
+{ 
+  try 
+  { 
+     if (event.button==2||event.button==3) 
+     {
+        if (disabled_message != '')
+           alert(disabled_message);
+        return false; 
+     }
+  }  
+  catch (e) 
+  { 
+     if (e.which == 3) return false; 
+  } 
+}
+</script>
+</div>
+
 </div>
 </div>
 </div>
+</div>
+<div style="z-index:72">
+<script>
+var disabled_message = "";
+document.oncontextmenu = function() 
+{ 
+   return false; 
+}
+document.onmousedown = function md(e) 
+{ 
+  try 
+  { 
+     if (event.button==2||event.button==3) 
+     {
+        if (disabled_message != '')
+           alert(disabled_message);
+        return false; 
+     }
+  }  
+  catch (e) 
+  { 
+     if (e.which == 3) return false; 
+  } 
+}
+</script>
 </div>
 </body>
 </html>
